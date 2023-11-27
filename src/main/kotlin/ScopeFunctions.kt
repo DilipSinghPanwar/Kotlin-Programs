@@ -1,33 +1,47 @@
-fun main(){
-    val employee = Employee()
-
-    val emp = employee.apply {
-        name = "a"
-        age = 20
-    }
-    println(emp)
-
-    val employee1: Employee? = null
-    employee1?.name = "kotlin"
-    employee1?.age = 5
-
-    employee1?.let {
-        it.name =  "jsk"
-        it.age = 100
+fun main() {
+    val student1: Student? = null
+//    student1?.name = "abc"
+//    student1?.className = "12"
+    student1?.let {
+        it.name = "abc"
+        it.className = "10"
     }
 
-    val employee2 = Employee()
-    val result = with(employee2){
-        name = "qwe"
-        age = 20
-        2
+    val student2 = Student().apply {
+        name = "abc"
+        className = "12"
     }
-    println(result)
+    println("student2: $student2")
 
-    val employee3 = Employee()
+    val student3 = Student().run {
+        name = "abc"
+        className = "12"
+        "hello"
+    }
+    println("student3: $student3")
+
+    val student4 = Student()
+    val result = with(student4){
+        name = "abc"
+        className = "12"
+        "Jsk"
+    }
+    println("student4: $result")
 
 
+    val student5 = Student().also {
+        it.printStudentDetails()
+    }
+    println("student5: $student5")
 }
 
-
-data class Employee(var name: String = "", var age: Int = 0)
+class Student() {
+    var name: String = "XYZ"
+    var className: String = "10"
+    fun printStudentDetails() {
+        println("Student Name: $name Student Class: $className")
+    }
+    override fun toString(): String {
+        return "Student(name='$name', className='$className')"
+    }
+}
