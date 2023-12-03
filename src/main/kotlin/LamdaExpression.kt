@@ -13,6 +13,7 @@ fun main(){
 
     student.invoke("Test",15)
 
+    //multi line lamda
     val employee = {
         val name = "test"
         val post = "SSE"
