@@ -27,7 +27,7 @@ class SystemManager{
 // Single Responsibility Principle Correct Usage:
 // As seen in this example, we divided our System class into specific parts
 // And placed the functions in their respective classes.
-class UserManager(){
+open class UserManager(){
     fun addUser(user:String){
         println("add $user")
     }
