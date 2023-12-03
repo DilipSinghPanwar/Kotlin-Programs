@@ -18,6 +18,6 @@ fun higherOrderFun(fn:()->Int){
 var lamdaSum = {x:Int,y:Int->x+y}
 
 fun higherOrderFun1(fn:(Int,Int)->Int){
-    var sum = fn(2,2)
-    println("sum is: "+sum)
+    val sum = fn(2,2)
+    println("sum is: $sum")
 }
