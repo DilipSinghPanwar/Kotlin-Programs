@@ -3,6 +3,12 @@ fun main(){
 
 }
 
+//Child classes should never break the parent class’ type definitions.
+//It means that a subclass should override the methods from a parent class,
+// which does not break the functionality of the parent class.
+
+//A parent object should be able to replace its child during runtime polymorphism.
+
 //abstract class Vehicle{
 //    abstract fun startEngine()
 //    abstract fun stopEngine()
