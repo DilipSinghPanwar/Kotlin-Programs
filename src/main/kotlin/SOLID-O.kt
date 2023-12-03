@@ -7,6 +7,8 @@ fun main() {
     println(invoiceAlphaNumeric.printInvoice("abc"))
 }
 
+//A class should be open for an extension and closed for the modification.
+
 //Example
 //Suppose, we have a class name Invoice, which has invoiceNumber, which has an integer type
 open class Invoice() {
