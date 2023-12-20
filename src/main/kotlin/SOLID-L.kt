@@ -3,6 +3,27 @@ fun main(){
 
 }
 
+open class Bird{
+ fun makeSound(){}
+ fun fly() {}
+}
+
+class Eagle : Bird()
+class Penguin : Bird() // fails LSP because it cannot fly therefore has different behaviour and cannot call fly() method
+
+// solution
+
+open class Bird{
+ fun makeSound(){}
+}
+
+open class FlyingBird : Bird() {
+ fun fly() {}
+}
+
+class Eagle : FlyingBird()
+class Penguin : Bird()
+
 //Child classes should never break the parent class’ type definitions.
 //It means that a subclass should override the methods from a parent class,
 // which does not break the functionality of the parent class.
